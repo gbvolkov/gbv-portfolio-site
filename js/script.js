@@ -1,5 +1,13 @@
 // js/script.js
 
+// Function to update the base href dynamically after loading sections
+function updateBaseHref() {
+    const baseElement = document.querySelector('base');
+    if (baseElement) {
+        baseElement.setAttribute('href', '/gbv-portfolio-site/');
+    }
+}
+
 // Функция для загрузки HTML-файлов в контейнеры с возможностью передачи колбэка
 function loadSection(sectionId, filePath, callback) {
     fetch(filePath)
@@ -15,6 +23,8 @@ function loadSection(sectionId, filePath, callback) {
             if (callback && typeof callback === 'function') {
                 callback();
             }
+            // Update base href after content is loaded
+            updateBaseHref();
             // После загрузки контента инициализируем кнопки "Подробнее"
             initializeReadMoreButtons();
         })
