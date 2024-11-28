@@ -1,0 +1,22 @@
+<!-- sections/contact.html -->
+<h2>Контакты</h2> 
+<div class="contact-info">
+    <p><i class="fas fa-envelope icon"></i><a href="mailto:george.volkoff@yahoo.com">george.volkoff@yahoo.com</a></p>
+    <p><i class="fas fa-phone icon"></i><a href="tel:+79690404020">+7 969 040-40-20</a></p>
+    <p><i class="fab fa-github icon"></i><a href="https://github.com/gbvolkov" target="_blank">gbvolkov (GitHub)</a></p>
+</div>
+<form id="contact-form">
+    <label for="name">Имя:</label>
+    <input type="text" id="name" name="name" required>
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required>
+
+    <label for="message">Сообщение:</label>
+    <textarea id="message" name="message" rows="5" required></textarea>
+
+    <button type="submit"><i class="fas fa-paper-plane icon"></i>Отправить</button>
+</form>
+
+<!-- Добавляем контейнер для сообщений об успешной отправке или ошибках -->
+<div id="contact-response" class="response-message"></div>
